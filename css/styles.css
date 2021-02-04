@@ -1,0 +1,346 @@
+@font-face
+{
+    font-family: 'Century Gothic';
+    src: url(fuente/CenturyGothic.ttf);
+}
+@font-face
+{
+    font-family: 'Century Gothic';
+    src: url(fuente/GOTHICB.ttf);
+    font-weight: bold;
+}
+html, body {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Century Gothic',sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #B62487;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.75em;
+    margin: 0.5em 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.25em;
+    margin: 0.5em 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+}
+
+h3 {
+    margin: 0.75em 0
+}
+
+h5{
+    font-weight: 500;
+    font-size: 0.85em;
+    margin: 0.45em 0
+}
+
+h6{
+    font-weight: 200;
+    font-size: 0.75em;
+     margin: 0.45em 0
+}
+
+img{
+    width: 100%;
+    vertical-align: middle;
+}
+
+#menu{
+    position: fixed;
+    top: 0;
+    background-color: rgb(225,212,200);
+    width: 100%;
+    z-index:1;
+    display:flex;
+}
+
+#menu > ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.25em; 
+}
+
+#menu > ul > li{
+    list-style: none;
+    text-align: center;
+    padding: 1em;
+    
+}
+#menu > figure{
+    width: 5em;
+    margin: 0.25em 1.25em;
+    align-content: center;
+}
+#menu > ul > li > a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Century Gothic',sans-serif;
+    font-size: 1.25em;
+}
+
+#menu > ul > li:hover{
+    background-color: rgb(114,86,74);
+}
+#menu > ul > li:hover > a{
+    color: white;
+}
+/*#menu > .logo{
+    flex: 100%;
+    width: 3.5rem;
+    height: 3rem;
+    position:fixed;
+    left: 16px;
+    vertical-align: middle;
+    background-image: url("../img/lvqanh_logo.png");
+    background-size: cover;    
+}*/
+
+#portfolio .portcontent{
+    margin: 4em 0;
+}
+#portfolio > .transition {
+    background-color: rgb(225,212,200);
+    color: black;
+    padding: 3.5em 0;
+}
+
+#portfolio > div > h3 {
+    width: 100%;
+    text-align:center;
+    color: rgb(114,86,74);
+    font-size: 1.5em;
+}
+
+#portfolio > div > div{
+    padding: 0 12em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#portfolio > div > div > figure{
+    flex:30%;
+    position: relative;
+    margin: 0;
+    padding: 0.5em;
+}
+
+#portfolio > div > div > figure > figcaption{
+    text-align:center;
+    color: rgb(114,86,74);
+}
+
+#portfolio > div > div > figure > p {
+    text-align:center;
+    color: rgb(114,86,74);
+    margin:0;
+}
+a
+{
+    text-decoration: none;
+    color:chocolate;
+}
+#bio .transition2{
+    background-color: rgb(225,212,200);
+    color: black;
+    padding: 3.5em 0;
+}
+
+#bio > .biocontent{
+    margin: 4em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bio > div > figure{
+    transform: rotate(90deg);
+    width: 45%;
+    MARGIN:0 ;   
+}
+#bio > div > div{
+    color: rgb(114,86,74);
+    font-size:1.25em;
+    width: 80%;
+}
+
+#bio > div > div > div{
+    margin-bottom: 1em;
+}
+
+#contact .transition3{
+    background-color: rgb(225,212,200);
+    color: black;
+    padding: 3.5em 0;
+}
+
+#contact > div{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .content{
+    margin: 4em 0;
+}
+#contact .contentfigure{
+    width: 30%;
+    display:flex;
+    justify-content: center;
+}
+#contact > div > div > figure{
+    width: 70%;
+}
+#contact .content1{
+    width: 50%;
+    color: rgb(114,86,74);
+}
+#contact .contentText{
+    font-size: 1.25em;
+}
+#contact .content2column{
+    display:flex;
+}
+#contact .tele{
+    width: 50%;
+    color: black;
+}
+#contact .email{
+    width: 50%;
+    color: black;
+}
+
+footer {
+    padding: 1em;
+    background-color: rgb(225,212,200);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+}
+
+footer > div > figure{
+    width: 35%;   
+}
+
+
+footer > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div > div {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.content1{
+    color: black;
+    width: 40%;
+    margin: 0 1.25em;
+}
+.content2{
+    justify-content: center;
+    margin:0 1.25em;
+}
+footer > div > div > div > a {
+    text-decoration: none;
+    margin: 3px;
+    color: rgb(114,86,74);
+}
+
+footer > div > div > div> a > i {
+    font-size:3.5em;
+}
+
+footer > div > div > div > a:hover > i {
+    color: black;
+}
+
+/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 1100px */
+@media screen and (max-width: 1100px) {
+    #portfolio > figcaption {
+        padding: 1em;
+    }
+}
+
+/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 900px */
+@media screen and (max-width: 900px) {
+    #portfolio > div > div > figure {
+        flex: 30%;
+        flex-direction: column;
+    }
+    #portfolio > div > div {
+        padding: 0 6em;
+    }
+}
+
+/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 800px */
+@media screen and (max-width: 800px) {
+    footer > div > div > div > a > i{
+        font-size:1.5em;
+    }
+    footer > div > div > div {
+        font-size: 1em;
+    }
+}
+
+/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 700px */
+@media screen and (max-width: 700px) {
+    #menu > ul{
+        font-size:1em;
+    }
+     #contact .content1{
+        font-size:0.7em;
+    }
+    footer > div > div > div > a > i{
+        font-size:1.5em;
+    }
+   footer > figure{
+    width: 35%;   
+    }
+        footer > div > div > div {
+        font-size: 0.7em;
+    }
+}
+
+/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 600px */
+@media screen and (max-width: 600px) {
+    #contact .content1{
+        font-size:0.7em;
+    }
+        #portfolio > div > div > figure {
+        flex: 40%;
+        flex-direction: column;
+    }
+        #portfolio > div > div {
+        padding: 0 3.5em;
+    }
+}
