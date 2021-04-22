@@ -3,29 +3,64 @@
     font-family: 'Century Gothic';
     src: url(fuente/CenturyGothic.ttf);
 }
+
 @font-face
 {
     font-family: 'Century Gothic';
     src: url(fuente/GOTHICB.ttf);
     font-weight: bold;
 }
+
+/*#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+#modal > figure {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modal > figure > img {
+    max-height: 70vh;
+    width: 50%;
+}
+
+#modal > figure > figcaption {
+    width: 40%;
+    color: white;
+    font-size: 2em;
+}
+
+#cerrar {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-family: 'Century Gothic', sans-serif;
+    font-size: 3em;
+    color: white;
+    cursor: pointer;
+}*/
+
+
+
 html, body {
     margin:0;
     padding:0;
+    width: 100%;
     box-sizing: border-box;
     font-family: 'Century Gothic',sans-serif;
-    color: white;
     scroll-behavior: smooth;
-}
-
-header {
-    background-color: #B62487;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 h1 {
@@ -65,35 +100,117 @@ img{
     vertical-align: middle;
 }
 
-#menu{
-    position: fixed;
-    top: 0;
-    background-color: rgb(225,212,200);
+/* MAQUETACIÓN DEL INDEX */
+
+.div_index {
     width: 100%;
+    height: 100vh;
+    /* Contenedor flexible para centrar el header vertical y horizontalmente*/ 
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(225,212,200);
+}
+
+.div_index > div{
+    padding: 6em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+    height: 60vh;
+}
+.div_index > div > figure{
+    justify-content:center;
+    align-items: center;
+    width: 40%;
+    margin-bottom: 0;
+    
+}
+.div_index > div > header {
+    background-color: rgb(225,212,200);
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.div_index > div> header > h2 {
+    margin-top: 2em;
+    margin-bottom: 0.25em;
+    font-size: 3em;
+    color: rgb(114,86,74);
+    align-items: flex-end;
+    font-weight: bold;
+}
+
+.div_index >div> header > p {
+    margin-top: 0em;
+}
+
+.div_index >div> header > p > a {
+    color:  rgb(114,86,74);
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+.div_index > div>header > p > a:hover {
+    font-weight: bold;
+    text-decoration: line-through;
+    color: black;
+}
+
+
+/* MAQUETACIÓN DEL PORFOLIO */
+
+#home > div{
+    display: flex;
+    flex-direction: column;
+}
+#home .Mobile{
+    display: none;
+}
+
+#menu{
+    background-color: rgb(225,212,200);
     z-index:1;
+    width: 100%;
     display:flex;
+    position: fixed;
 }
 
 #menu > ul{
-    width: 100%;
+    
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-size: 1.25em; 
+    font-size: 1em; 
+    
 }
 
 #menu > ul > li{
     list-style: none;
     text-align: center;
     padding: 1em;
-    
 }
+
+#menu .openMenu, .closeMenu{
+    display: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+
 #menu > figure{
-    width: 5em;
-    margin: 0.25em 1.25em;
+    width: 9em;
+    margin: 1.0em 1.0em;
     align-content: center;
+    justify-content: center;
 }
 #menu > ul > li > a {
     color: black;
@@ -104,6 +221,7 @@ img{
 
 #menu > ul > li:hover{
     background-color: rgb(114,86,74);
+    color: white;
 }
 #menu > ul > li:hover > a{
     color: white;
@@ -149,8 +267,23 @@ img{
 }
 
 #portfolio > div > div > figure > figcaption{
-    text-align:center;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    text-align: center;
+    background-color: rgb(225,212,200);
+    opacity: 0;
     color: rgb(114,86,74);
+    transition: 1s;
+}
+#portfolio > div > div > figure > figcaption:hover{
+    opacity: 1;
 }
 
 #portfolio > div > div > figure > p {
@@ -170,7 +303,7 @@ a
 }
 
 #bio > .biocontent{
-    margin: 4em 0;
+    margin: 8em 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -205,7 +338,7 @@ a
 }
 
 #contact .content{
-    margin: 4em 0;
+    margin: 8em 0;
 }
 #contact .contentfigure{
     width: 30%;
@@ -286,13 +419,25 @@ footer > div > div > div > a:hover > i {
 
 /* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 1100px */
 @media screen and (max-width: 1100px) {
+    
     #portfolio > figcaption {
         padding: 1em;
     }
+    .div_index >div> header > h2 {
+    margin-top: 1.5em;
+    font-size: 3em;
+    }
+    .div_index >div> header > p > a {
+    font-size: 2em;
+    }
+    .div_index > div > figure{
+        width: 60%;  
+    }
+
 }
 
 /* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 900px */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
     #portfolio > div > div > figure {
         flex: 30%;
         flex-direction: column;
@@ -300,16 +445,17 @@ footer > div > div > div > a:hover > i {
     #portfolio > div > div {
         padding: 0 6em;
     }
-}
+        .div_index >div> header > h2 {
+    margin-top: 1.5em;
+    font-size: 2.5em;
+    }
+    .div_index >div> header > p > a {
+    font-size: 2em;
+    }
+    .div_index > div > figure{
+        width: 80%;  
+    }
 
-/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 800px */
-@media screen and (max-width: 800px) {
-    footer > div > div > div > a > i{
-        font-size:1.5em;
-    }
-    footer > div > div > div {
-        font-size: 1em;
-    }
 }
 
 /* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 700px */
@@ -318,29 +464,189 @@ footer > div > div > div > a:hover > i {
         font-size:1em;
     }
      #contact .content1{
-        font-size:0.7em;
+        font-size: 0.9em;
     }
     footer > div > div > div > a > i{
         font-size:1.5em;
     }
-   footer > figure{
-    width: 35%;   
+   footer > div > figure{
+    width: 25%;   
     }
-        footer > div > div > div {
-        font-size: 0.7em;
+    footer > div > div {
+    font-size: 1em;
+    width: 75%;
     }
+    footer > div > div > .content2{
+        font-size: 1.55em;
+    }
+    
+    .div_index >div> header > h2 {
+    margin-top: 1.5em;
+    font-size: 2.5em;
+    }
+    .div_index >div> header > p > a {
+    font-size: 2em;
+    }
+    .div_index > div > figure{
+        width: 100%;  
+    }
+
 }
 
 /* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 600px */
+
 @media screen and (max-width: 600px) {
+    
+    /*#menu > ul > li:first-child{
+        display:flex;
+    }
+    
+    #menu > ul > li:not(first-child){
+        display: none;
+    }
+    
+    #menu > ul{
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }*/
+    
+    #menu .mainMenu {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: top 1s ease;
+        display: none;
+        background: rgb(225,212,200);
+        font-size: 1.5em;
+    }
+    #menu .mainMenu .closeMenu {
+        display:block;
+        position: absolute;
+    }
+    
+    #menu .openMenu {
+        margin: 0em 1em;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #menu .closeMenu{
+        top:3em;
+        font-size: 2em;
+    }
+    
+    
+    #home .Mobile{
+    display: inherit;
+    }
+    #home .Desktop{
+        display: none;
+    }
+    h1{
+        font-size: 1.25em;
+    }
+    h2{
+        display:none;
+    }
+    
+    #portfolio > .transition{
+        padding: 2.5em 0;
+    }
+    #portfolio .portcontent {
+        margin: 0;
+    }
+    
+    #portfolio > div > div > figure > figcaption:hover{
+    opacity: 0;
+}
     #contact .content1{
         font-size:0.7em;
     }
         #portfolio > div > div > figure {
-        flex: 40%;
+        flex:auto;
         flex-direction: column;
     }
         #portfolio > div > div {
-        padding: 0 3.5em;
+        padding: 2em;
     }
+    
+    #bio > .biocontent {
+        margin: 3em 0em;
+    }
+    #bio > .transition2 {
+        padding: 2.5em 0;
+    }
+    #bio > div > figure{
+        display:none;
+    }
+    #bio > div > div{
+        font-size: 1.1em;
+    }
+    
+    #contact .transition3{
+        padding: 2.5em 0;
+    }
+    #contact > div > div > figure{
+        display:none;
+    }
+    #contact .content {
+        margin: 3em 1.5em;
+        flex:auto;
+        flex-direction: column;
+    }
+    #contact .content1{
+        width: 100%;
+        font-size: 0.80em;
+        
+    }
+    
+    footer > div {
+      flex-direction: column;
+    }
+
+    footer > div > div{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .content1{
+        width: 50%;
+    }
+    footer .content2{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .div_index > div{
+        padding: 3em;
+        height: 85vh;
+    }
+    .div_index >div> header > h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    display: inherit;
+    justify-content: center;
+    }
+    .div_index >div> header {
+    margin: 3em 3em;
+    }
+    .div_index >div> header > p > a {
+    font-size: 2em;
+    }
+    .div_index > div > figure{
+    width: 100%;  
+    }
+
 }
