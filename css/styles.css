@@ -11,49 +11,6 @@
     font-weight: bold;
 }
 
-/*#modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-}
-
-#modal > figure {
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#modal > figure > img {
-    max-height: 70vh;
-    width: 50%;
-}
-
-#modal > figure > figcaption {
-    width: 40%;
-    color: white;
-    font-size: 2em;
-}
-
-#cerrar {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    font-family: 'Century Gothic', sans-serif;
-    font-size: 3em;
-    color: white;
-    cursor: pointer;
-}*/
-
-
-
 html, body {
     margin:0;
     padding:0;
@@ -61,6 +18,7 @@ html, body {
     box-sizing: border-box;
     font-family: 'Century Gothic',sans-serif;
     scroll-behavior: smooth;
+    overflow-x:hidden;
 }
 
 h1 {
@@ -183,7 +141,7 @@ img{
 }
 
 #menu > ul{
-    
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
@@ -238,7 +196,7 @@ img{
 }*/
 
 #portfolio .portcontent{
-    margin: 4em 0;
+    margin: 6em 0;
 }
 #portfolio > .transition {
     background-color: rgb(225,212,200);
@@ -246,16 +204,44 @@ img{
     padding: 3.5em 0;
 }
 
-#portfolio > div > h3 {
+#portfolio > h3 {
     width: 100%;
     text-align:center;
     color: rgb(114,86,74);
     font-size: 1.5em;
 }
 
+ .dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+ }
+.active, .dot:hover {
+   background-color: #717171;
+ }
+ .fade {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+ }
+@-webkit-keyframes fade {
+   from {opacity: .4}
+   to {opacity: 1}
+ }
+@keyframes fade {
+   from {opacity: .4}
+   to {opacity: 1}
+ }
+
 #portfolio > div > div{
     padding: 0 12em;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
 }
 
@@ -266,7 +252,7 @@ img{
     padding: 0.5em;
 }
 
-#portfolio > div > div > figure > figcaption{
+#portfolio > div > div > figure > a > figcaption{
     position: absolute;
     left:0;
     top:0;
@@ -282,7 +268,7 @@ img{
     color: rgb(114,86,74);
     transition: 1s;
 }
-#portfolio > div > div > figure > figcaption:hover{
+#portfolio > div > div > figure > a > figcaption:hover{
     opacity: 1;
 }
 
@@ -338,7 +324,7 @@ a
 }
 
 #contact .content{
-    margin: 8em 0;
+    margin: 12em 0;
 }
 #contact .contentfigure{
     width: 30%;
@@ -368,7 +354,8 @@ a
 }
 
 footer {
-    padding: 1em;
+    
+    padding: 0em;
     background-color: rgb(225,212,200);
     display: flex;
     justify-content:space-between;
@@ -417,8 +404,8 @@ footer > div > div > div > a:hover > i {
     color: black;
 }
 
-/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 1100px */
-@media screen and (max-width: 1100px) {
+/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 1200px */
+@media screen and (max-width: 1200px) {
     
     #portfolio > figcaption {
         padding: 1em;
@@ -433,15 +420,14 @@ footer > div > div > div > a:hover > i {
     .div_index > div > figure{
         width: 60%;  
     }
-
-}
-
-/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 900px */
-@media screen and (max-width: 850px) {
+    #portfolio .portcontent{
+    margin: 4em 0;
+    }
     #portfolio > div > div > figure {
         flex: 30%;
         flex-direction: column;
     }
+
     #portfolio > div > div {
         padding: 0 6em;
     }
@@ -457,6 +443,29 @@ footer > div > div > div > a:hover > i {
     }
 
 }
+
+/* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 900px
+@media screen and (max-width: 900px) {
+    #portfolio > div > div > figure {
+        flex: 30%;
+        flex-direction: column;
+    }
+
+    #portfolio > div > div {
+        padding: 0 6em;
+    }
+        .div_index >div> header > h2 {
+    margin-top: 1.5em;
+    font-size: 2.5em;
+    }
+    .div_index >div> header > p > a {
+    font-size: 2em;
+    }
+    .div_index > div > figure{
+        width: 80%;  
+    }
+
+} */
 
 /* MAQUETACIÓN PARA PANTALLAS DE MENOS DE 700px */
 @media screen and (max-width: 700px) {
@@ -540,7 +549,7 @@ footer > div > div > div > a:hover > i {
         align-items: center;
     }
     #menu .closeMenu{
-        top:3em;
+        top:2em;
         font-size: 2em;
     }
     
