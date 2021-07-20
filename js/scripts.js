@@ -21,13 +21,14 @@ const sr = ScrollReveal({
     reset: true
 });
 
-sr.reveal('#menu', {delay:50});
-sr.reveal('#portGallery1', {delay:100});
-sr.reveal('.biotext', {delay: 200});
-sr.reveal('.biotypo', {delay: 100});
-sr.reveal('.contentfigure', {delay: 100});
-sr.reveal('.contentcontact', {delay: 200});
-
+$( document ).ready(function() {
+    sr.reveal('#menu', {delay:50});
+    sr.reveal('#portGallery1', {delay:100});
+    sr.reveal('.biotext', {delay: 200});
+    sr.reveal('.biotypo', {delay: 100});
+    sr.reveal('.contentfigure', {delay: 100});
+    sr.reveal('.contentcontact', {delay: 200});
+});
 
    
 

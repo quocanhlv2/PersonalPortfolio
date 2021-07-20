@@ -3,7 +3,9 @@ const sr = ScrollReveal({
     distance: '80px',
     duration: 2000,
     reset: true
-})
+});
 
-sr.reveal('.text', {delay: 200})
-sr.reveal('.logo', {delay: 100})
+$( document ).ready(function() {
+    sr.reveal('.text', {delay: 200});
+    sr.reveal('.logo', {delay: 100});
+});
