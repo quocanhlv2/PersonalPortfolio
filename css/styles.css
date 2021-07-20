@@ -8,13 +8,13 @@
 @font-face
 {
     font-family: 'Century Gothic';
-    src: url(fuente/CenturyGothic.ttf);
+    src: url(../Resources/fuente/CenturyGothic.ttf);
 }
 
 @font-face
 {
     font-family: 'Century Gothic';
-    src: url(fuente/GOTHICB.ttf);
+    src: url(../Resources/fuente/GOTHICB.TTF);
     font-weight: bold;
 }
 
