@@ -19,17 +19,17 @@ const sr = ScrollReveal({
     distance: '80px',
     duration: 2000,
     reset: true
-})
+});
 
-sr.reveal('#menu', {delay:50})
+sr.reveal('#menu', {delay:50});
+sr.reveal('#portGallery1', {delay:100});
+sr.reveal('.biotext', {delay: 200});
+sr.reveal('.biotypo', {delay: 100});
+sr.reveal('.contentfigure', {delay: 100});
+sr.reveal('.contentcontact', {delay: 200});
 
-sr.reveal('#portGallery1', {delay:100})
 
-sr.reveal('.biotext', {delay: 200})
-sr.reveal('.biotypo', {delay: 100})
-
-sr.reveal('.contentfigure', {delay: 100})
-sr.reveal('.contentcontact', {delay: 200})
+   
 
 var slideIndex = 1;
 function plusSlides(n) {
@@ -38,6 +38,7 @@ function plusSlides(n) {
 function currentSlide(n) {
    showSlides(slideIndex = n);
  }
+
 function showSlides(n) {
    var i;
    var slides = document.getElementsByClassName("portGallery");
