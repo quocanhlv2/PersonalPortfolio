@@ -18,7 +18,8 @@ const sr = ScrollReveal({
     origin: 'top',
     distance: '80px',
     duration: 2000,
-    reset: true
+    reset: false,
+    mobile: false,
 });
 
 $( document ).ready(function() {
@@ -29,6 +30,7 @@ $( document ).ready(function() {
     sr.reveal('.contentfigure', {delay: 100});
     sr.reveal('.contentcontact', {delay: 200});
 });
+
 
    
 
