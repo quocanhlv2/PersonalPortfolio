@@ -580,8 +580,8 @@ footer > div > div > div > a:hover > i {
     } */
 
     .intro{
-        background-image: url('../Resources/img/bg/Artwork_NoBg2.png');
-        background-size:85%;
+        background-image: url('../Resources/img/bg/Mobile2.png');
+        background-size:cover;
     }
     .text-intro-main{
         display:flex;
