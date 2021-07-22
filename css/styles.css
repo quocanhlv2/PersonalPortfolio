@@ -165,7 +165,7 @@ img{
     color: var(--beige);
 }
 .text-intro-left{
-    margin-top: 50vh;
+    margin-top: 40vh;
 }
 
 /*Menu*/
@@ -580,29 +580,36 @@ footer > div > div > div > a:hover > i {
     } */
 
     .intro{
-        background-image: url('../Resources/img/bg/Mobile2.png');
+        background-image: url('../Resources/img/bg/Mobile1.png');
         background-size:cover;
     }
     .text-intro-main{
         display:flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1em;
+        padding: 0.75em;
     }
     .text-intro{
-        font-size:  0.75em !important;
+        font-size:  0.9em !important;
     }
     .text-intro-left{
-        margin-top: 55vh;
+        margin-top: 65vh;
 
     }
     .text-intro-right{
-        margin-top: -45vh;
+        margin-top: -50vh;
         display:inline;
         font-size:  1.25em;
         text-align: right;
     }
-
+    .text-intro-right > p{
+        color:var(--brown);
+        margin: 0.7em 0em;
+    }
+    .text-intro-left > p{
+        text-shadow: 1px 1px var(--brown);
+        margin: 0.7em 0em;
+    }
 
     h1{
         font-size: 1.25em;
