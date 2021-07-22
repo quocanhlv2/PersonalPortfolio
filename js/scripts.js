@@ -19,19 +19,17 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 2000,
     reset: false,
-    mobile: false,
+    mobile: true,
 });
 
-sr.reveal('.text-intro-left',{delay:100});
-sr.reveal('.text-intro-right',{delay:200});
+sr.reveal('.text-intro-left',{ origin: 'left' });
+sr.reveal('.text-intro-right',{ origin: 'right' });
 sr.reveal('#menu', {delay:10});
-
-//sr.reveal('#portGallery1', {delay:50});
-//sr.reveal('.biotext', {delay: 100});
-//sr.reveal('.biotypo', {delay: 50});
-//sr.reveal('.contentfigure', {delay: 50});
-//sr.reveal('.contentcontact', {delay: 100});
-
+sr.reveal('#portGallery1', {delay:50});
+sr.reveal('.biotext', {delay: 100});
+sr.reveal('.biotypo', {delay: 50});
+sr.reveal('.contentfigure', {delay: 50});
+sr.reveal('.contentcontact', {delay: 100});
 
    
 
