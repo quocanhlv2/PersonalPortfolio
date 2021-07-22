@@ -16,20 +16,21 @@ function close(){
 
 const sr = ScrollReveal({
     origin: 'top',
-    distance: '80px',
+    distance: '60px',
     duration: 2000,
     reset: false,
     mobile: false,
 });
 
-$( document ).ready(function() {
-    sr.reveal('#menu', {delay:50});
-    sr.reveal('#portGallery1', {delay:100});
-    sr.reveal('.biotext', {delay: 200});
-    sr.reveal('.biotypo', {delay: 100});
-    sr.reveal('.contentfigure', {delay: 100});
-    sr.reveal('.contentcontact', {delay: 200});
-});
+sr.reveal('.text-intro-left',{delay:100});
+sr.reveal('.text-intro-right',{delay:200});
+sr.reveal('#menu', {delay:10});
+
+//sr.reveal('#portGallery1', {delay:50});
+//sr.reveal('.biotext', {delay: 100});
+//sr.reveal('.biotypo', {delay: 50});
+//sr.reveal('.contentfigure', {delay: 50});
+//sr.reveal('.contentcontact', {delay: 100});
 
 
    
