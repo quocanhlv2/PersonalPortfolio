@@ -158,6 +158,7 @@ img{
     justify-content: space-between;
     align-items: center;
     padding:3em;
+    text-shadow: 0.5px 0px var(--brown);
 }
 .text-intro{
     margin: 1.5em 3em;
@@ -166,6 +167,9 @@ img{
 }
 .text-intro-left{
     margin-top: 40vh;
+}
+.text-intro-right{
+    text-align: right;
 }
 
 /*Menu*/
@@ -495,9 +499,14 @@ footer > div > div > div > a:hover > i {
     }
     .text-intro-left{
         font-size:1.2em;
+        margin-top: 50vh;
+    }
+    .text-intro-left > p{
+        text-shadow: 1px 1px var(--black);
     }
     .text-intro-right{
-        display: none;
+        font-size: 1em;
+        margin-top: -50vh;
     }
 
     .transition{
@@ -598,16 +607,13 @@ footer > div > div > div > a:hover > i {
     }
     .text-intro-right{
         margin-top: -50vh;
-        display:inline;
         font-size:  1.25em;
-        text-align: right;
     }
     .text-intro-right > p{
         color:var(--brown);
         margin: 0.7em 0em;
     }
     .text-intro-left > p{
-        text-shadow: 1px 1px var(--brown);
         margin: 0.7em 0em;
     }
 
