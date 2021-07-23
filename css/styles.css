@@ -71,26 +71,29 @@ img{
 .div_index {
     width: 100%;
     height: 100vh;
-    /* Contenedor flexible para centrar el header vertical y horizontalmente*/ 
     justify-content: center;
     align-items: center;
     background-color: var(--beige);
+    overflow-x:hidden;
 }
 
+
 .div_index > div{
-    padding: 6em;
+    margin: 3em;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction:column;
-    height: 60vh;
+    height: 100vh;
 }
 .div_index > div > figure{
     justify-content:center;
     align-items: center;
-    width: 40%;
+    display: flex;
     margin-bottom: 0;
-    
+}
+.div_index > div > figure > img{
+    width: 40%;
 }
 .div_index > div > header {
     background-color: var(--beige);
@@ -458,6 +461,9 @@ footer > div > div > div > a:hover > i {
 
 @media screen and (max-width: 1300px) {
 
+    .div_index > div > figure > img{
+        width: 60%;
+    }
     .text-intro{
         margin: 1.5em 0em;
     }
@@ -507,6 +513,9 @@ footer > div > div > div > a:hover > i {
 
 /* MAQUETACIÓN PARA PANTALLAS TABLET*/
 @media screen and (max-width: 1024px) {
+    .div_index > div > figure > img{
+        width: 70%;
+    }
     .intro{
         background-size:85%;
     }
@@ -559,7 +568,13 @@ footer > div > div > div > a:hover > i {
 /* MAQUETACIÓN PARA PANTALLAS MÓVILES */
 
 @media screen and (max-width: 600px) {    
-    
+    .div_index > div > figure > img{
+        width: 80%;
+    }
+    .div_index > .content{
+        padding: 0.5em;
+        margin:0.5em;
+    }
     #menu .mainMenu {
         height: 100vh;
         width: 100%;
