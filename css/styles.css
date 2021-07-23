@@ -332,8 +332,19 @@ a
 
 #bio > div > figure{
     transform: rotate(90deg);
+    MARGIN:0;
     width: 45%;
-    MARGIN:0 ;   
+    padding: 0;
+    justify-content: center;
+    display:flex;   
+}
+#bio > div > figure > img{
+    height: 14vmax;
+    max-height: 15vh;
+    width: auto;
+    margin:0;
+    padding:0;
+   
 }
 #bio > div > div{
     color: var(--brown);
@@ -348,14 +359,14 @@ a
 /*Contact*/
 
 #contact > div{
-    color: black;
+    color: var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #contact .content{
-    margin: 8em 0;
+    margin: 12em 0;
 }
 #contact .contentfigure{
     width: 30%;
@@ -367,7 +378,7 @@ a
 }
 #contact .content1{
     width: 50%;
-    color: rgb(114,86,74);
+    color: var(--brown));
 }
 #contact .contentText{
     font-size: 1.25em;
@@ -488,7 +499,9 @@ footer > div > div > div > a:hover > i {
     #portfolio > div > div {
         padding: 0;
     }
-
+    #contact .content{
+        margin: 8em 0;
+    }
 }
 
 
@@ -596,7 +609,7 @@ footer > div > div > div > a:hover > i {
         display:flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0.75em;
+        padding: 0.7em;
     }
     .text-intro{
         font-size:  0.9em !important;
@@ -624,7 +637,7 @@ footer > div > div > div > a:hover > i {
         display:none;
     }
     
-    #portfolio > .transition{
+    .transition{
         padding: 2.5em 0;
     }
     #portfolio .portcontent {
@@ -637,30 +650,28 @@ footer > div > div > div > a:hover > i {
     #contact .content1{
         font-size:0.7em;
     }
-        #portfolio > div > div > figure {
+    #portfolio > div > div > figure {
         flex:auto;
         flex-direction: column;
     }
-        #portfolio > div > div {
+    #portfolio > div > div {
         padding: 0;
     }
     
     #bio > .biocontent {
-        margin: 3em 0em;
+        margin: 3em 0.7em;
+        justify-content: start;
     }
-    #bio > .transition2 {
-        padding: 2.5em 0;
-    }
+
     #bio > div > figure{
         display:none;
     }
     #bio > div > div{
         font-size: 1.1em;
+        width: 100%;
     }
     
-    #contact > .transition3{
-        padding: 2.5em 0;
-    }
+
     #contact > div > div > figure{
         display:none;
     }
